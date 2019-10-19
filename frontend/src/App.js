@@ -7,8 +7,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         
-        <h1>FIND OUT WHO YOUR REAL FRIENDS ARE</h1>
-        <img src={logo} width="150" className="App-logo" alt="logo" />
+        <h1>Freefriendsreport.com</h1>
+        <h4>The ONLY free source for finding out who your real friends are</h4>
+        <img src={logo} width="150" height="" className="App-logo" alt="logo" />
        
       </header>
     </div>
