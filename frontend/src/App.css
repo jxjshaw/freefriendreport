@@ -1,5 +1,11 @@
-.App, *{
-  text-align: left;
+* {
+  color: blue;
+}
+
+html {
+  background-color: white;
+  margin: 24px;
+
 }
 
 
