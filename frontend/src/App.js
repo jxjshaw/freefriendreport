@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './smarticon.gif';
 import './App.css';
 import FriendCard from './FriendCard.js'
-import FRIENDREPORTJSON from './data.js'
+import FRIENDREPORTJSON from './data.json'
 
 
 
