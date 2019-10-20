@@ -71,7 +71,9 @@ function App() {
         Your TOTAL score = aka the aggregate
         {listItems}
         
-      
+        <form action="https://www.facebook.com/dyi?x=Adm94qWFKLgs1TQe">
+            <input type="submit" value="download messenger data"/>
+        </form>
     </div>
   );
 }
