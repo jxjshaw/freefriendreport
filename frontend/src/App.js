@@ -38,7 +38,10 @@ function App() {
 
     const data = ParseFriendReportJson();
     const listItems = data.map((d) => 
-        <FriendCard data={d} key={d["conversation"].name}>
+        <FriendCard 
+            data={d} 
+            key={d["conversation"].name}
+            >
         </FriendCard>);
 
   return (
@@ -65,7 +68,7 @@ function App() {
         Our service allows you to see all your messaging history in an accurate stream of blue to grey ratio to see who initiated first, who initiated more, who lost interest <br/>
         </p>
         
-        
+        Your TOTAL score = aka the aggregate
         {listItems}
         
       
