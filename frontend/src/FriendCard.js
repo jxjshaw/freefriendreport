@@ -6,19 +6,18 @@ const Header = styled.div`
   padding: 20px;
   padding-bottom: 4px;
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 600;
   color: #c1c1c2;
-  color: black;
+  color: white;
+  
 `;
 
 const Subhead = styled.div`
   padding-left: 24px;
   padding-top: 8px;
-  font-size: 16px;
-  opacity: 0.5;
+  font-size: 60px;
   font-weight: 300;
-  color: #c1c1c2;
-  color: black;
+  color: ${props => props.color};
 `;
 
 const Container = styled.div`
@@ -30,16 +29,26 @@ const Container = styled.div`
   height: 300px;
   margin-top: 24px;
   margin-bottom: 24px;
+  background-color: #0874FC;
+  color: white;
+  border-radius: 60px;
+  padding: 24px;
 `;
 
 
 
 function FriendCard(props) {
   const { conversation: {name, friend_messages, your_messages}} = props.data;
+  const friendshipScore = friend_messages/your_messages;
   return (
     <Container>
       <Header>{name}</Header>
-      <Subhead>{friend_messages/your_messages}</Subhead>
+      {
+        friend_messages/your_messages<1 ? 
+         <Subhead color="red"> {friendshipScore} </Subhead> :
+         <Subhead color="white"> {friendshipScore} </Subhead>
+    }
+      
     </Container>
   );
 }
