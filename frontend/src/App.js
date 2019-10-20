@@ -37,7 +37,9 @@ function App() {
     
 
     const data = ParseFriendReportJson();
-    const listItems = data.map((d) => <li key={d["conversation"].name}> {d["conversation"].friend_messages}</li>);
+    const listItems = data.map((d) => 
+        <FriendCard data={d} key={d["conversation"].name}>
+        </FriendCard>);
 
   return (
     <div className="App">
@@ -63,18 +65,9 @@ function App() {
         Our service allows you to see all your messaging history in an accurate stream of blue to grey ratio to see who initiated first, who initiated more, who lost interest <br/>
         </p>
         
-        {
-             
-            // const items =data.map((d) => {
-            //     const val= Object.values(d)[0];
-            //     return (<li>{val.name}</li>)
-            //   });
-              
-        }
         
         {listItems}
         
-        <FriendCard> </FriendCard>
       
     </div>
   );

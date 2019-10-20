@@ -34,12 +34,12 @@ const Container = styled.div`
 
 
 
-function FriendCard() {
-  
+function FriendCard(props) {
+  const { conversation: {name, friend_messages, your_messages}} = props.data;
   return (
     <Container>
-      <Header>Friend name</Header>
-      <Subhead>score</Subhead>
+      <Header>{name}</Header>
+      <Subhead>{friend_messages/your_messages}</Subhead>
     </Container>
   );
 }
