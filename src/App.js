@@ -1,49 +1,17 @@
 import React from 'react';
 import logo from './smarticon.gif';
 import './App.css';
-import FriendCard from './FriendCard.js';
+// <<<<<<< Updated upstream
+// import FriendCard from './FriendCard.js';
+// import FRIENDREPORTJSON from './data.json'
+// 
+// 
+// =======
 import Instructions from './Instructions.js';
-import FRIENDREPORTJSON from './data.json'
-
-
+import FileReader from './file-reader.js'
+// >>>>>>> Stashed changes
 
 function App() {
-
-    function ParseFriendReportJson() {
-        var data = [];
-        FRIENDREPORTJSON["conversations"].forEach(function(conversation) {
-            var friend = conversation["title"]
-            var num_friend_messages = 0;
-            var num_your_messages = 0;
-            conversation["messages"].forEach(function(message) {
-                if (message['text']) {
-                    if (message['sender'] === 'Kevin Sun') {
-                        num_friend_messages += message['text'].length;
-                    } else {
-                        num_your_messages += message['text'].length;
-                    }
-                }
-            });
-            console.log(friend + "---- your friend sent " + num_friend_messages + ": you sent " + num_your_messages);
-            data.push({
-                "conversation" : {
-                    "name" : friend,
-                    "friend_messages" : num_friend_messages,
-                    "your_messages" : num_your_messages
-                }
-            });
-        });
-        return data;
-    }
-    
-
-    const data = ParseFriendReportJson();
-    const listItems = data.map((d) => 
-        <FriendCard 
-            data={d} 
-            key={d["conversation"].name}
-            >
-        </FriendCard>);
 
   return (
     <div className="App">
@@ -75,7 +43,7 @@ function App() {
         <Instructions/>
 
     
-        {listItems}
+        <FileReader/>
         
         <form action="https://www.facebook.com/dyi?x=Adm94qWFKLgs1TQe">
             <input type="submit" value="download messenger data"/>
