@@ -1,8 +1,7 @@
-import * as React from 'react'
-import {useState, useEffect} from 'react'
-import FRIENDREPORTJSON from './data.json'
-import FriendCard from './FriendCard.js'
-import ReactDOM from 'react-dom'
+import * as React from 'react';
+import {useState, useEffect} from 'react';
+import FRIENDREPORTJSON from './data.json';
+import FriendCard from './FriendCard.js';
 
 function Old_ParseFriendReportJson() {
     var data = [];

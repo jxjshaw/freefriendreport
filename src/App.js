@@ -1,15 +1,11 @@
 import React from 'react';
 import logo from './smarticon.gif';
 import './App.css';
-// <<<<<<< Updated upstream
 // import FriendCard from './FriendCard.js';
-// import FRIENDREPORTJSON from './data.json'
-// 
-// 
-// =======
+// import FRIENDREPORTJSON from './data.json';
 import Instructions from './Instructions.js';
 import FileReader from './file-reader.js'
-// >>>>>>> Stashed changes
+
 
 function App() {
 
