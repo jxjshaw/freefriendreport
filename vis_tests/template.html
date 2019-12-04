@@ -1,0 +1,39 @@
+<!doctype html>
+<title>Hello from Flask</title>
+<style>
+.vertical {
+    display: block;
+    padding: 20px;
+}
+.horizontal {
+    display: flex;
+}
+.message {
+    width: 150px;
+}
+.topMessage {
+    border-radius: 48px 48px 0px 0px;
+}
+.bottomMessage {
+    border-radius: 0px 0px 48px 48px;
+}
+.blueMessage { 
+    background-color: #3278F7;
+}
+.greyMessage {
+    background-color: #D6DCE5;
+}
+</style>
+<body>
+    <div class="horizontal">
+        {% for c in content %}
+            <div class="vertical">
+                <p>Conversation with {{ c.friend }}</p>
+                <p>{{ c.ratio }}</p>
+            </div>
+            <div class="vertical">
+                {{ c.vis }}
+            </div>
+        {% endfor %}
+    </div>
+</body>
