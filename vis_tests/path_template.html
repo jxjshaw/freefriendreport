@@ -1,0 +1,15 @@
+<svg width="0" height="0">
+    <defs>
+        <clipPath id="{{ clip_id }}">
+            <circle cx="{{ radius }}" cy="{{ radius }}" r="{{ radius }}"></circle>
+            <circle cx="{{ radius }}" cy="{{ height - radius }}" r="{{ radius }}"></circle>
+            <circle cx="{{ width - radius }}" cy="{{ height - radius }}" r="{{ radius }}"></circle>
+            <circle cx="{{ width - radius }}" cy="{{ radius }}" r="{{ radius }}"></circle>
+            <rect y="{{ radius }}" width="{{ width }}" height="{{ height - 2 * radius }}"></rect>
+            <rect x="{{ radius }}" width="{{ width - 2 * radius }}" height="{{ height }}"></rect>
+        </clipPath>
+    </defs>
+</svg>
+<div class="section" style="clip-path: url(#{{ clip_id }})">
+{{ content }}
+</div>
